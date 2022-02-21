@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>哇LOL哇咯哇咯</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', funn)
+        //这里的 e就是事件对象 有事件才会有事件对象，事件对象是一些列相关数据的集合 这信息包含在对象里 ，也会根据事件改变返回的信息
+        //
+        //这里的参数一般填 event evt e
+        function funn(e) {
+            console.log(e);
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 属性和变量  函数和方法   
+属性和变量都能赋值 
+函数和方法都能表达一个功能
+
+属性和方法是再对象里的使用需要带上对象 函数和变量是可以直接使用 */
+
+        var duixiang = new Object();
+        /* 属性和方法可以追加进去 赋值用等号结尾用等号 */
+        duixiang.UserName = '辉辉';
+        /* 方法追加也是这样 */
+        duixiang.fafang = function () {
+            console.log('功能');
+        }
+        /* 调用的方式是一样的 */
+        console.log(duixiang.UserName);
+        console.log(duixiang['UserName']);
+
+        console.log(duixiang.fafang());
+    </script>
+
+</body>
+
+</html>

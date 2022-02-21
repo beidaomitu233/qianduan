@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>传统 </button>
+    <button>多事件监听 </button>
+    <script>
+        let btn = document.querySelectorAll('button')
+
+        //当同时添加多个事件时只会用最后一个
+        btn[0].onclick = function () {
+            alert('辉')
+        }
+        btn[0].onclick = function () {
+            alert('辉2')
+        }
+
+        //事件监听就可以同时添加多个事件,并且按照先后顺序执行 vaddevenListener
+        //事件类型要加引号 不写on 
+        //                       type    执行函数，可以写到外面去再进行调用，且不用加括号
+        //true 是捕获阶段， false是冒泡阶段
+        btn[1].addEventListener('click', fui, true)
+
+        function fui() {
+            alert('辉3')
+        }
+        btn[1].addEventListener('click', function () {
+            alert('辉4')
+        })
+    </script>
+
+
+
+</body>
+
+</html>
